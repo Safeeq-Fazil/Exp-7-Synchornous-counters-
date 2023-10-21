@@ -104,7 +104,10 @@ endmodule
 
 
 
-### TRUTH TABLE 
+### TRUTH TABLE FOR UPCOUNTER:
+
+![DE exp 6 truth up](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/e2e31e31-045d-4a61-88d4-3ed15742e1b1)
+
 
 
 
