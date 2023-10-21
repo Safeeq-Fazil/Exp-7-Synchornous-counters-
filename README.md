@@ -1,7 +1,10 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
-### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement 4 bit up and down counters and validate  functionality.
+### HARDWARE REQUIRED: 
+– PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:
+Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -53,8 +56,24 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Safeeq Fazil.A
+RegisterNumber:  212222240086
+
+### UPCOUNTER
+```
+
+module upcounter(A,clk);
+output reg [3:0]A;
+input clk;
+always@(posedge clk)
+begin
+	A[3]=(A[2]&A[1]&A[0])^A[3];
+	A[2]=(A[1]&A[0])^A[2];
+	A[1]=(A[0]^A[1]);
+	A[0]=1^A[0];
+end
+endmodule
+```
 */
 
 
@@ -62,8 +81,15 @@ RegisterNumber:
 
 
 
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
+### RTL LOGIC UP COUNTER
 
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/72f3c63f-32b7-4c45-a17e-65d689a65ad7)
+
+
+### RTL LOGIC DOWN COUNTER:
+### Waveform Output for UP COUNTER :
+
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/819ec80d-b307-4b28-b4a4-d3f04764f7e5)
 
 
 
