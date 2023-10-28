@@ -69,51 +69,69 @@ output reg [3:0]A;
 input clk;
 always@(posedge clk)
 begin
-	A[3]=(A[2]&A[1]&A[0])^A[3];
-	A[2]=(A[1]&A[0])^A[2];
-	A[1]=(A[0]^A[1]);
-	A[0]=1^A[0];
+A[0]=((((A[1])&(A[2]))&A[3])^A[0]);
+A[1]=(((A[2])&(A[3]))^A[1]);
+A[2]=((A[3])^A[2]);
+A[3]=1^A[3];
 end
 endmodule
+
+```
+
+### DOWNCOUNTER
+```
+module downcounter(A,clk);
+output reg [3:0]A;
+input clk;
+always@(posedge clk)
+begin
+A[3]=((((~A[2])&(~A[1]))&(~A[0]))^A[3]);
+A[2]=(((~A[1])&(~A[0]))^A[2]);
+A[1]=((~A[0])^A[1]);
+A[0]=1^A[0];
+end
+endmodule
+
 ```
 
 
 
 
 
+## RTL LOGIC UP COUNTER AND DOWN COUNTER:
+
+### Upcounter RTL:
+
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/e64c714d-052c-4711-a7c3-86e2e7eff1e8)
+
+### Downcounter RTL:
+
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/8d0fe969-82f2-4f47-88f6-e900700d5419)
 
 
-### RTL LOGIC UP COUNTER
+## TIMING DIGRAMS FOR COUNTER  
 
-![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/72f3c63f-32b7-4c45-a17e-65d689a65ad7)
+### Upcounter Waveform:
 
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/eb3a0404-abd7-401d-9d6f-fa3c74914293)
 
-### RTL LOGIC DOWN COUNTER:
-### Waveform Output for UP COUNTER :
+### Downcounter Waveform:
 
-![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/819ec80d-b307-4b28-b4a4-d3f04764f7e5)
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/8aba5a67-bce6-4f80-b0d3-ff8063953efe)
 
+## TRUTH TABLE:
 
+### Upcounter Truthtable:
 
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/56fad041-c65b-4809-aada-be80fd82d2d4)
 
 
+### Downcounter TruthTable:
 
 
-
-### TRUTH TABLE FOR UPCOUNTER:
-
-![DE exp 6 truth up](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/e2e31e31-045d-4a61-88d4-3ed15742e1b1)
-
-
-
-
+![image](https://github.com/Safeeq-Fazil/Exp-7-Synchornous-counters-/assets/118680361/fdd4f351-7f2d-4190-9812-83129fd1e485)
 
 
 
 ### RESULTS 
+Thus, The Synchornous counters of up counter and down counter circuit are studied and the truth table for different logic gates are Successfully verified.
