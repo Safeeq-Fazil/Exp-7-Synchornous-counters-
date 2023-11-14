@@ -1,4 +1,5 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
+## Date: 21/10/2023
 ### AIM: 
 To implement 4 bit up and down counters and validate  functionality.
 ### HARDWARE REQUIRED: – PC, Cyclone II , USB flasher
